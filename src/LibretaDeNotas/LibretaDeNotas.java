@@ -6,8 +6,11 @@ public class LibretaDeNotas {
     static Map<String, List<Double>> calificacionEstudiante = new HashMap<>();
 
     public static double ingresoNotas(Scanner sc) {
-        System.out.println("Ingrese las notas del alumno: ");
-        double nota = sc.nextDouble();
+        double nota;
+        do{
+            System.out.println("Ingrese las notas del alumno: ");
+            nota = sc.nextDouble();
+        }while(nota < 1 || nota > 7);
         sc.nextLine();
         return nota;
     }
